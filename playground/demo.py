@@ -20,7 +20,6 @@ os.environ["LIBRARY_PATH"] = library_path
 
 from vllm import LLM, SamplingParams  # noqa: E402
 
-
 prompts = [
     "Hello, my name is",
     "The president of the United States is",

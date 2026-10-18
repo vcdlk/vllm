@@ -548,4 +548,3 @@ uv pip install -r requirements/test/cuda.in
 
 最重要的检验是：进入下一轮 `EngineCore.step()` 前，能够预测本轮大概会
 调度多少 token、请求状态如何变化，以及下一步会进入哪个组件。
-

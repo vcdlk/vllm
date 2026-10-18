@@ -103,6 +103,7 @@ if [[ ! -e .vscode/launch.json ]]; then
             "justMyCode": false,
             "subProcess": true,
             "env": {
+                "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}",
                 "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
                 "VLLM_LOGGING_LEVEL": "DEBUG"
             }
