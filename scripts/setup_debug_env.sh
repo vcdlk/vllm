@@ -67,7 +67,7 @@ fi
 import pathlib
 import torch
 import vllm
-import vllm._C
+import vllm._C_stable_libtorch
 
 assert torch.cuda.is_available(), "PyTorch cannot access the GPU"
 assert pathlib.Path(vllm.__file__).resolve().parent == pathlib.Path.cwd() / "vllm"
