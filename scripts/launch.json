@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "vLLM: debug OpenAI API server (Qwen3-0.6B)",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "module": "vllm.entrypoints.openai.api_server",
+      "args": [
+        "--model",
+        "Qwen/Qwen3-0.6B",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--enforce-eager"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "subProcess": true,
+      "env": {
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}",
+        "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+        "VLLM_LOGGING_LEVEL": "DEBUG"
+      }
+    },
+    {
+      "name": "vLLM: debug current Python file",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "subProcess": true,
+      "env": {
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}",
+        "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+        "VLLM_LOGGING_LEVEL": "DEBUG"
+      }
+    }
+  ]
+}
